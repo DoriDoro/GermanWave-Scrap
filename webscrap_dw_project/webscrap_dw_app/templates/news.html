@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block content %}
+Hello
+    {% for n in news %}
+    Hello
+        <div class="post block">
+            <h2 class="subtitle">{{ n.title }}</h2>
+            <small>Posted at {{ n.published_date }}</small>
+            <p>{{ n.description }}</p>
+            <a href="{% url '/' n.link %}">Read more</a>
+        </div>
+    {% endfor %}
+{% endblock %}

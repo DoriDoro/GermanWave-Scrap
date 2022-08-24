@@ -31,7 +31,8 @@ def dw_rss():
 
 
 def save_articles(article_list):
-	with open('articles.txt', 'w') as file:
-		json.dump(article_list, file)
+	with open('articles.json', 'w') as file:
+		json.dump(article_list, file, indent=4)
+		
 
 dw_rss()

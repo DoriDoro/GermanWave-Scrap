@@ -1,18 +1,17 @@
 from django.db import models
 
-'''
-title 
-link 
-description 
-published_date 
 
-
-class Headline(models.Model):
+class News(models.Model):
   title = models.CharField(max_length=200)
-  image = models.URLField(null=True, blank=True)
-  url = models.TextField()
+  link = models.URLField(max_length=200)
+  description = models.TextField()
+  published_date = models.CharField(max_length=50)
+
   def __str__(self):
-    return self.title'''
+    return self.title
+
+
+
 
 
 
