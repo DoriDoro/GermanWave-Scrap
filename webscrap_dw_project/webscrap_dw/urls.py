@@ -19,5 +19,5 @@ from webscrap_dw_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.dw_rss, name='news'),
+    path('', views.news_list, name='news'),
 ]

@@ -1,6 +1,13 @@
 from django.shortcuts import render, redirect
 from .models import News
 
+
+def news_list(request):
+	news = News.objects.all()
+	return render(request, 'news.html', {'news': news})
+
+
+
 from django.http import HttpResponse
 import requests
 from bs4 import BeautifulSoup as bs4
